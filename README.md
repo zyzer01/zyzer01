@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://twitter.com/zyzer01" target="blank"><img src="https://img.shields.io/twitter/follow/zyzer01?logo=twitter&style=for-the-badge" alt="zyzer01" /></a> </p>
 
-- 👨‍💻 All of my projects are available at [https:davidfola.dev](https:davidfola.dev)
+- 👨‍💻 All of my projects are available at [https://davidfola.dev](https://davidfola.dev)
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
