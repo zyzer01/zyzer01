@@ -11,19 +11,6 @@
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://codepen.io/zyzer01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="zyzer01" height="30" width="40" /></a>
-<a href="https://dev.to/zyzer01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="zyzer01" height="30" width="40" /></a>
-<a href="https://twitter.com/zyzer01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="zyzer01" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/afolabi-onifade-8798151a4" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="afolabi-onifade-8798151a4" height="30" width="40" /></a>
-<a href="https://stackoverflow.com/users/15806777" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="15806777" height="30" width="40" /></a>
-<a href="https://instagram.com/@zyzer01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="@zyzer01" height="30" width="40" /></a>
-<a href="https://medium.com/@zyzer01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@zyzer01" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/david fola" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="david fola" height="30" width="40" /></a>
-</p>
-
-
 <p><animated-image data-catalyst="" style="float: right; width: 375px;"><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/coder.gif" data-target="animated-image.originalLink"><img align="right" height="250" alt="" src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/coder.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
       <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
         <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/coder.gif" target="_blank">
@@ -50,6 +37,21 @@
         </span>
       </span></animated-image></p>
       
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://codepen.io/zyzer01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="zyzer01" height="30" width="40" /></a>
+<a href="https://dev.to/zyzer01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="zyzer01" height="30" width="40" /></a>
+<a href="https://twitter.com/zyzer01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="zyzer01" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/afolabi-onifade-8798151a4" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="afolabi-onifade-8798151a4" height="30" width="40" /></a>
+<a href="https://stackoverflow.com/users/15806777" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="15806777" height="30" width="40" /></a>
+<a href="https://instagram.com/@zyzer01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="@zyzer01" height="30" width="40" /></a>
+<a href="https://medium.com/@zyzer01" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@zyzer01" height="30" width="40" /></a>
+<a href="https://www.youtube.com/c/david fola" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="david fola" height="30" width="40" /></a>
+</p>
+
+
+
       
 
 <h3 align="left">Languages and Tools:</h3>
