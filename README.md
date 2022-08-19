@@ -28,3 +28,8 @@
 
 <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=zyzer01&show_icons=true&locale=en&layout=compact" alt="zyzer01" /></p>
 
+
+<p align="center" dir="auto">
+        <a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/mayhemantt/mayhemantt/Update/svg/Bottom.svg"><img src="https://raw.githubusercontent.com/mayhemantt/mayhemantt/Update/svg/Bottom.svg" alt="Github Stats" style="max-width: 100%;"></a>
+</p>
+
