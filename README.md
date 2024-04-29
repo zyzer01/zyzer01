@@ -1,12 +1,12 @@
-<h1 align="left">Hey there👋</h1>
+<h1 align="center">Hey there👋</h1>
 
 ###
 
-<p align="left">- 🔭 I’m working as a frontend engineer<br>- 📚 I'm currently learning mobile app development with flutter</p>
+<p align="center">- 🔭 I’m working as a frontend engineer<br>- 📚 I'm currently learning mobile app development with flutter</p>
 
 ###
 
-<h3 align="left">🛠 Language and tools</h3>
+<h3 align="center">🛠 Language and tools</h3>
 
 ###
 
