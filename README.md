@@ -2,10 +2,9 @@
 
 ###
 
-<p align="center">- 🔭 I’m working as a frontend engineer<br>- 📚 I'm currently learning mobile app development with flutter <br>- 🚀 [View my portfolio](https://davidfola.vercel.app) </p>
+<p align="center">- 🔭 I’m working as a frontend engineer<br>- 📚 I'm currently learning mobile app development with flutter <br>- 🚀 [example link text](https://davidfola.vercel.app)</p> 
 
 ###
-[example link text](http://example/com)
 
 <h3 align="center">🛠 Language and tools</h3>
 
