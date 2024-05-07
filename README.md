@@ -6,11 +6,11 @@
 
 ###
 
-<h3 align="center">🛠 Language and tools</h3>
+<p align="center">🚀 [View my portfolio] (https://davidfola.vercel.app)</p>
 
 ###
 
-<h3 align="center">🚀 [View my portfolio](https://davidfola.vercel.app)</h3>
+<h3 align="center">🛠 Language and tools</h3>
 
 ###
 
