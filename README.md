@@ -3,8 +3,7 @@
 ###
 
 <p align="center">- 🔭 I’m working as a frontend engineer<br>- 📚 I'm currently learning mobile app development with flutter</p>
-
-###
+<br>-
 <p align="center">🚀 [View my portfolio](https://davidfola.vercel.app)</p>
 
 ###
