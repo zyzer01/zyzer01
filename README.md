@@ -2,7 +2,7 @@
 
 ###
 
-<p align="center">- 🔭 I’m working as a frontend engineer <br>- 🚀 [View my portfolio](https://davidfola.vercel.app)</p> 
+<p align="center">- 🔭 <br>- 🚀 [View my portfolio](https://davidfola.vercel.app)</p> 
 
 ###
 
