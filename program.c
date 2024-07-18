@@ -8,22 +8,22 @@ typedef struct {
     int marks;
 } Student;
 
-void add_student(Student **students, int *num_students);
-void modify_student(Student *students, int num_students);
-void display_students(Student *students, int num_students);
+void add_learner(Student **learners, int *num_learners);
+void edit_learner(Student *learners, int num_learners);
+void show_learners(Student *learners, int num_learners);
 void check_pass_fail(int passing_threshold);
-void save_to_file(Student *students, int num_students);
-void load_from_file(Student **students, int *num_students);
-Student *search_by_roll_number(Student *students, int num_students, int roll_number);
-void calculate_average_marks(Student *students, int num_students);
-void sort_by_marks(Student *students, int num_students);
+void save_to_file(Student *learners, int num_learners);
+void load_from_file(Student **learners, int *num_learners);
+Student *find_by_roll_number(Student *learners, int num_learners, int roll_number);
+void calculate_average_marks(Student *learners, int num_learners);
+void sort_by_marks(Student *learners, int num_learners);
 
 int main() {
-    Student *students = NULL;
-    int num_students = 0;
+    Student *learners = NULL;
+    int num_learners = 0;
     int passing_threshold = 40;
 
-    printf("Welcome to the Student Record System!\n");
+    printf("Welcome to the Students Record System!\n");
     printf("Enter your name: ");
     char user_name[50];
     scanf("%s", user_name);
@@ -31,12 +31,12 @@ int main() {
 
     while (1) {
         printf("Choose an option:\n");
-        printf("1. Add student\n");
-        printf("2. Modify student\n");
-        printf("3. Display students\n");
+        printf("1. Add learner\n");
+        printf("2. Edit learner\n");
+        printf("3. Show learners\n");
         printf("4. Save to file\n");
         printf("5. Load from file\n");
-        printf("6. Search by roll number\n");
+        printf("6. Find by roll number\n");
         printf("7. Calculate average marks\n");
         printf("8. Check pass or fail\n");
         printf("9. Sort by marks\n");
@@ -48,34 +48,34 @@ int main() {
 
         switch (choice) {
             case 1:
-                add_student(&students, &num_students);
+                add_learner(&learners, &num_learners);
                 break;
             case 2:
-                modify_student(students, num_students);
+                edit_learner(learners, num_learners);
                 break;
             case 3:
-                display_students(students, num_students);
+                show_learners(learners, num_learners);
                 break;
             case 4:
-                save_to_file(students, num_students);
+                save_to_file(learners, num_learners);
                 break;
             case 5:
-                load_from_file(&students, &num_students);
+                load_from_file(&learners, &num_learners);
                 break;
             case 6:
-                search_by_roll_number(students, num_students, 0);
+                find_by_roll_number(learners, num_learners, 0);
                 break;
             case 7:
-                calculate_average_marks(students, num_students);
+                calculate_average_marks(learners, num_learners);
                 break;
             case 8:
                 check_pass_fail(passing_threshold);
                 break;
             case 9:
-                sort_by_marks(students, num_students);
+                sort_by_marks(learners, num_learners);
                 break;
             case 10:
-                free(students);
+                free(learners);
                 return 0;
             default:
                 printf("Invalid option. Please try again.\n");
@@ -85,97 +85,95 @@ int main() {
     return 0;
 }
 
+void add_learner(Student **learners, int *num_learners) {
+    *learners = (Student *)realloc(*learners, sizeof(Student) * (*num_learners + 1));
 
-void add_student(Student **students, int *num_students) {
-    *students = (Student *)realloc(*students, sizeof(Student) * (*num_students + 1));
-
-    printf("\nEnter student name: ");
-    scanf("%s", (*students)[*num_students].name);
+    printf("\nEnter learner name: ");
+    scanf("%s", (*learners)[*num_learners].name);
 
     printf("Enter roll number: ");
-    scanf("%d", &(*students)[*num_students].roll_number);
+    scanf("%d", &(*learners)[*num_learners].roll_number);
 
     printf("Enter marks: ");
-    scanf("%d", &(*students)[*num_students].marks);
+    scanf("%d", &(*learners)[*num_learners].marks);
 
-    (*num_students)++;
+    (*num_learners)++;
 
-    printf("\nStudent added successfully!\n\n");
+    printf("\nLearner added successfully!\n\n");
 }
 
-void modify_student(Student *students, int num_students) {
-    if (num_students == 0) {
-        printf("No students to modify.\n");
+void edit_learner(Student *learners, int num_learners) {
+    if (num_learners == 0) {
+        printf("No learners to edit.\n");
         return;
     }
 
     int roll_number;
-    printf("\nEnter roll number of the student to modify: ");
+    printf("\nEnter roll number of the learner to edit: ");
     scanf("%d", &roll_number);
 
-    Student *student = search_by_roll_number(students, num_students, roll_number);
+    Student *learner = find_by_roll_number(learners, num_learners, roll_number);
 
-    if (student != NULL) {
-        printf("Enter new student name: ");
-        scanf("%s", student->name);
+    if (learner != NULL) {
+        printf("Enter new learner name: ");
+        scanf("%s", learner->name);
 
         printf("Enter new roll number: ");
-        scanf("%d", &student->roll_number);
+        scanf("%d", &learner->roll_number);
 
         printf("Enter new marks: ");
-        scanf("%d", &student->marks);
+        scanf("%d", &learner->marks);
     } else {
-        printf("Student not found.\n");
+        printf("Learner not found.\n");
     }
 }
 
-void display_students(Student *students, int num_students) {
-    if (num_students == 0) {
-        printf("No students to display.\n");
+void show_learners(Student *learners, int num_learners) {
+    if (num_learners == 0) {
+        printf("No learners to show.\n");
         return;
     }
 
-    printf("\nStudent Records:\n");
-    for (int i = 0; i < num_students; i++) {
-        printf("Name: %s\n", students[i].name);
-        printf("Roll Number: %d\n", students[i].roll_number);
-        printf("Marks: %d\n", students[i].marks);
+    printf("\nLearner Records:\n");
+    for (int i = 0; i < num_learners; i++) {
+        printf("Name: %s\n", learners[i].name);
+        printf("Roll Number: %d\n", learners[i].roll_number);
+        printf("Marks: %d\n", learners[i].marks);
         printf("-----------------\n");
     }
 }
 
 void check_pass_fail(int passing_threshold) {
 
-    double student_mark;
-    printf("\nEnter the the student mark to check: ");
-    scanf("%lf", &student_mark);
+    double learner_mark;
+    printf("\nEnter the learner mark to check: ");
+    scanf("%lf", &learner_mark);
 
-    if (student_mark > passing_threshold) {
-        printf("\nStudent has passed.\n\n");
+    if (learner_mark > passing_threshold) {
+        printf("\nLearner has passed.\n\n");
     } else {
-        printf("\nStudent has failed.\n\n");
+        printf("\nLearner has failed.\n\n");
     }
 }
 
-
-void save_to_file(Student *students, int num_students) {
-    if (num_students == 0) {
-        printf("No students to save.\n");
+void save_to_file(Student *learners, int num_learners) {
+    if (num_learners == 0) {
+        printf("No learners to save.\n");
         return;
     }
 
-    FILE *file = fopen("students.txt", "w");
+    FILE *file = fopen("learners.txt", "w");
 
-    for (int i = 0; i < num_students; i++) {
-        fprintf(file, "%s %d %d\n", students[i].name, students[i].roll_number, students[i].marks);
+    for (int i = 0; i < num_learners; i++) {
+        fprintf(file, "%s %d %d\n", learners[i].name, learners[i].roll_number, learners[i].marks);
     }
 
     fclose(file);
-    printf("\nStudents saved to file successfully.\n\n");
+    printf("\nLearners saved to file successfully.\n\n");
 }
 
-void load_from_file(Student **students, int *num_students) {
-    FILE *file = fopen("students.txt", "r");
+void load_from_file(Student **learners, int *num_learners) {
+    FILE *file = fopen("learners.txt", "r");
 
     if (file == NULL) {
         printf("Error opening file.\n");
@@ -186,28 +184,28 @@ void load_from_file(Student **students, int *num_students) {
     long size = ftell(file);
     rewind(file);
 
-    *num_students = 0;
+    *num_learners = 0;
     char c;
     while ((c = fgetc(file)) != EOF) {
         if (c == '\n') {
-            (*num_students)++;
+            (*num_learners)++;
         }
     }
     rewind(file);
 
-    *students = (Student *)malloc(sizeof(Student) * (*num_students));
+    *learners = (Student *)malloc(sizeof(Student) * (*num_learners));
 
-    for (int i = 0; i < *num_students; i++) {
-        fscanf(file, "%s %d %d", (*students)[i].name, &(*students)[i].roll_number, &(*students)[i].marks);
+    for (int i = 0; i < *num_learners; i++) {
+        fscanf(file, "%s %d %d", (*learners)[i].name, &(*learners)[i].roll_number, &(*learners)[i].marks);
     }
 
     fclose(file);
-    printf("\nStudents loaded from file successfully.\n\n");
+    printf("\nLearners loaded from file successfully.\n\n");
 }
 
-Student *search_by_roll_number(Student *students, int num_students, int roll_number) {
-    if (num_students == 0) {
-        printf("No students to search.\n");
+Student *find_by_roll_number(Student *learners, int num_learners, int roll_number) {
+    if (num_learners == 0) {
+        printf("No learners to search.\n");
         return NULL;
     }
 
@@ -216,51 +214,51 @@ Student *search_by_roll_number(Student *students, int num_students, int roll_num
         scanf("%d", &roll_number);
     }
 
-    for (int i = 0; i < num_students; i++) {
-        if (students[i].roll_number == roll_number) {
-            printf("Name: %s\n", students[i].name);
-            printf("Roll Number: %d\n", students[i].roll_number);
-            printf("Marks: %d\n", students[i].marks);
-            return &students[i];
+    for (int i = 0; i < num_learners; i++) {
+        if (learners[i].roll_number == roll_number) {
+            printf("Name: %s\n", learners[i].name);
+            printf("Roll Number: %d\n", learners[i].roll_number);
+            printf("Marks: %d\n", learners[i].marks);
+            return &learners[i];
         }
     }
 
-    printf("\nStudent not found.\n\n");
+    printf("\nLearner not found.\n\n");
     return NULL;
 }
 
-void calculate_average_marks(Student *students, int num_students) {
-    if (num_students == 0) {
-        printf("No students to calculate average marks.\n");
+void calculate_average_marks(Student *learners, int num_learners) {
+    if (num_learners == 0) {
+        printf("No learners to calculate average marks.\n");
         return;
     }
 
     int total_marks = 0;
 
-    for (int i = 0; i < num_students; i++) {
-        total_marks += students[i].marks;
+    for (int i = 0; i < num_learners; i++) {
+        total_marks += learners[i].marks;
     }
 
-    double average_marks = (double)total_marks / num_students;
+    double average_marks = (double)total_marks / num_learners;
     printf("\nAverage Marks: %.2f\n", average_marks);
 }
 
-void sort_by_marks(Student *students, int num_students) {
-    if (num_students == 0) {
-        printf("No students to sort.\n");
+void sort_by_marks(Student *learners, int num_learners) {
+    if (num_learners == 0) {
+        printf("No learners to sort.\n");
         return;
     }
 
-    for (int i = 0; i < num_students - 1; i++) {
-        for (int j = 0; j < num_students - i - 1; j++) {
-            if (students[j].marks < students[j + 1].marks) {
-                Student temp = students[j];
-                students[j] = students[j + 1];
-                students[j + 1] = temp;
+    for (int i = 0; i < num_learners - 1; i++) {
+        for (int j = 0; j < num_learners - i - 1; j++) {
+            if (learners[j].marks < learners[j + 1].marks) {
+                Student temp = learners[j];
+                learners[j] = learners[j + 1];
+                learners[j + 1] = temp;
             }
         }
     }
 
-    printf("\nStudents sorted by marks in descending order:\n");
-    display_students(students, num_students);
+    printf("\nLearners sorted by marks in descending order:\n");
+    show_learners(learners, num_learners);
 }
