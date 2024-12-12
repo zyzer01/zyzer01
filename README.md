@@ -2,7 +2,7 @@
 
 ###
 
-<p align="center">- 🔭 <br>- 🚀 [View my portfolio](https://davidfola.me)</p> 
+<p align="center">- 🔭 <br>- 🚀 [View my portfolio](https://www.davidfola.me)</p> 
 
 ###
 
